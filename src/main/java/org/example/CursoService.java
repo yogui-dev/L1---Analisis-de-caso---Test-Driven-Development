@@ -17,6 +17,11 @@ public class CursoService {
     }
 
     public boolean verificarCupos(int capacidad, int inscritos) {
+        if (capacidad < 0 || inscritos < 0) {
+            throw new IllegalArgumentException("Capacidad e inscritos deben ser >= 0");
+        }
+        if (inscritos > capacidad) return false;
         return inscritos < capacidad;
     }
+
 }
