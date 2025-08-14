@@ -15,4 +15,8 @@ public class CursoService {
                 .average()
                 .orElseThrow();
     }
+
+    public boolean verificarCupos(int capacidad, int inscritos) {
+        return inscritos < capacidad;
+    }
 }
